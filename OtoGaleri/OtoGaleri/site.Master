@@ -1,0 +1,77 @@
+﻿<!DOCTYPE html>
+
+<html lang="tr">
+<head>
+    <title>Bootstrap Example</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <style>
+        .altbilgi {
+            display: flex;
+            justify-content: space-around;
+            background-color: black;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        body {
+            background-image: url("imgs/arkaplan.jpg");
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-position: center;
+        }
+
+        .auto-style1 {
+            left: 0px;
+            top: 0px;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-inverse">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="#">Oto Galeri</a>
+            </div>
+            <ul class="nav navbar-nav">
+                <li class="active"><a href="anasayfa.aspx">Ana Sayfa</a></li>
+                <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Favori Markalar<span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#">Mercedes</a></li>
+                        <li><a href="#">Audi</a></li>
+                        <li><a href="#">BMW</a></li>
+                    </ul>
+                </li>
+                <li><a href="aracekle.aspx">Araç Ekle</a></li>
+                <li><a href="hakkimizda.aspx">Hakkımızda</a></li>
+                <li><a href="iletisim.aspx">İletişim</a></li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href="kayitol.aspx"><span class="glyphicon glyphicon-user"></span>Kayıt Ol</a></li>
+                <li><a href="girisyap.aspx"><span class="glyphicon glyphicon-log-in"></span>Giriş Yap</a></li>
+            </ul>
+        </div>
+    </nav>
+    <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+    </asp:ContentPlaceHolder>
+    <br />
+    <footer class="altbilgi">
+        <section class="iletisim">
+            <h3>İletişim</h3>
+            <p>
+                Adres: Dalaman Oto Galeri<br>
+                Telefon: 0252 500 12 34<br>
+                Email: info@dalamanotogaleri.com
+            </p>
+            <p>Copyright &copy; 2023 Dalaman Oto Galeri</p>
+        </section>
+    </footer>
+
+</body>
+</html>

@@ -1,0 +1,72 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="admin.master.cs" Inherits="OtoGaleri.admin" %>
+
+<!DOCTYPE html>
+<html>
+<head runat="server">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Admin Ana Sayfa</title>
+    <style>
+        body {
+            margin: 0 0;
+            padding: 0;
+        }
+
+        .arkaplan {
+            height: 100%;
+            width: 100%;
+            overflow: hidden;
+        }
+
+        .panel {
+            width: 20%;
+            height: 100%;
+            float: left;
+            background-color: black;
+            text-align: center;
+        }
+
+        .sayfa {
+            float: left;
+            width: 80%;
+            height: 100%;
+        }
+
+        .liste {
+            color: white;
+            list-style-type: none;
+        }
+
+        a:visited {
+            color: white;
+            text-decoration: none;
+        }
+    </style>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+
+<body>
+    <div class="arkaplan">
+        <div class="panel">
+            <br />
+            <div>
+                <img src="imgs/admin.png" style="width: 50%; height: 50%;" />
+                <div>
+                    <ul>
+                        <li class="liste"><a href="admin.aspx">Ana Sayfa</a></li>
+                        <br />
+                        <li class="liste"><a href="admin_kullanicilar.aspx">Kullanıcılar</a></li>
+                        <br />
+                        <li class="liste"><a href="admin_iletisim.aspx">İletişim</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="sayfa">
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder>
+        </div>
+    </div>
+</body>
+</html>
